@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Countries</h1>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CountriesList from './components/CountriesList.vue';
+import CountryDetail from './components/CountryDetail.vue';
+import ListComponent from './components/ListComponent.vue';
+import { eventBus } from "./main.js";
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    "countries-list": CountriesList,
+    "country-detail": CountryDetail,
+    "list-component": ListComponent
   }
 }
 </script>
