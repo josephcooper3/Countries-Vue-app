@@ -2,7 +2,8 @@
   <div id="app">
     <h1>Countries</h1>
     <div>
-      <countries-list v-bind:countries='countries'></countries-list>
+      <country-detail v-bind:country="selectedCountry"></country-detail>
+      <countries-list v-bind:countries="countries"></countries-list>
     </div>
   </div>
 </template>
