@@ -12,6 +12,17 @@ import { eventBus } from "./main.js";
 
 export default {
   name: 'app',
+  data(){
+    return {
+      countries: [],
+      selectedCountry: null
+    };
+  },
+  mounted(){
+    fetch('https://restcountries.eu/rest/v2/all')
+    .then(result => result.json())
+    .then(countries => this.countries = countries)
+  },
   components: {
     "countries-list": CountriesList,
     "country-detail": CountryDetail,
